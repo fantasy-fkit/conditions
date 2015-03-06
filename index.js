@@ -2,20 +2,9 @@
  * Created by KlimMalgin on 04.03.2015.
  */
 
-/**
- * Здесь будет описание условных функторов типа
- * gt(greater than),
- * gte(greater than or equal),
- * lt(less than),
- * lte,
- * equal,
- * notEqual
- * и т.д.
- **/
-
 var curry = require('core.lambda').curry,
     // --
-    fcommon = require('./fcommon'),
+    fcommon = require('fantasy-fkit-common'),
     operationWrap = fcommon.operationWrap,
     conditionResult = fcommon.conditionResult;
 
@@ -37,6 +26,5 @@ module.exports = {
 
     equal: operationWrap(equalOp),
     notEqual: operationWrap(notEqualOp)
-
-
+    
 };
