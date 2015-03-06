@@ -4,7 +4,7 @@
 
 var curry = require('core.lambda').curry,
     // --
-    fcommon = require('fantasy-fkit-common'),
+    fcommon = require('common'),
     operationWrap = fcommon.operationWrap,
     conditionResult = fcommon.conditionResult;
 
@@ -19,12 +19,24 @@ var notEqualOp = curry(2, function (meV, valueV) { return conditionResult(meV !=
 
 module.exports = {
 
-    gt: operationWrap(gtOp),
-    gte: operationWrap(gteOp),
-    lt: operationWrap(ltOp),
-    lte: operationWrap(lteOp),
+    gt: function (valueO) {
+        return operationWrap(this, gtOp, valueO);
+    },
+    gte: function (valueO) {
+        return operationWrap(this, gteOp, valueO);
+    },
+    lt: function (valueO) {
+        return operationWrap(this, ltOp, valueO);
+    },
+    lte: function (valueO) {
+        return operationWrap(this, lteOp, valueO);
+    },
 
-    equal: operationWrap(equalOp),
-    notEqual: operationWrap(notEqualOp)
+    equal: function (valueO) {
+        return operationWrap(this, equalOp, valueO)
+    },
+    notEqual: function (valueO) {
+        return operationWrap(this, notEqualOp, valueO)
+    }
     
 };
