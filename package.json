@@ -1,0 +1,17 @@
+{
+  "name": "conditions",
+  "description": "Condition functions for fantasy-option",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fantasy-fkit/conditions.git"
+  },
+  "keywords": [
+    "conditions",
+    "fantasy",
+    "fkit"
+  ],
+  "author": "Klim Malgin",
+  "license": "MIT",
+  "main": "index.js",
+  "version": "0.0.1"
+}
